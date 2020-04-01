@@ -9,7 +9,7 @@ curl --fail -o .git/hooks/commit-msg https://raw.githubusercontent.com/hazcod/se
   && chmod 500 .git/hooks/commit-msg` .
 ```
 
-## Lerna monorepo
+## Lerna monorepo [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 This is a [Lerna monorepo](https://github.com/lerna/lerna). I've followed this guide, which I've found so useful an clean: https://dev.to/shnydercom/monorepos-lerna-typescript-cra-and-storybook-combined-4hli
 
 ## Mermaid diagrams
