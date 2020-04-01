@@ -17,6 +17,7 @@
     "story": "lerna run story --stream",
     "prestart": "lerna run libbuild --stream",
     "start": "lerna run start --stream",
-    "test": "lerna run test --stream"
+    "test": "lerna run test --stream",
+    "test-ci": "lerna run test-ci --stream"
   }
 }

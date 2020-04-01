@@ -10,7 +10,8 @@
   "scripts": {
     "story": "start-storybook",
     "libbuild": "tsc && tsc --build tsconfig.esm.json",
-    "test": "echo \"no tests yet\" "
+    "test": "echo \"no tests yet\" ",
+    "test-ci": "echo \"no tests yet\" "
   },
   "peerDependencies": {
     "react": "16.13.1",
