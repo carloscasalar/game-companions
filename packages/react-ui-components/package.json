@@ -9,7 +9,8 @@
   "license": "MIT",
   "scripts": {
     "story": "start-storybook",
-    "libbuild": "tsc && tsc --build tsconfig.esm.json"
+    "libbuild": "tsc && tsc --build tsconfig.esm.json",
+    "test": "echo \"no tests yet\" "
   },
   "peerDependencies": {
     "react": "16.13.1",
