@@ -1,9 +1,9 @@
 {
-  "name": "my-monorepo-cra-app",
+  "name": "no-mans-sky-companion",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@my-org/my-monorepo-ui-lib": "*",
+    "@carloscasalar/react-ui-components": "*",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0"

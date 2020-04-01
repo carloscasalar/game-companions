@@ -1,11 +1,11 @@
 {
-  "name": "@my-org/my-monorepo-ui-lib",
+  "name": "@carloscasalar/react-ui-components",
   "version": "1.0.0",
-  "description": "a UI library for my monorepo",
+  "description": "UI library for companion apps components",
   "main": "./lib/index.js",
   "module": "./lib-esm/index.js",
   "types": "./lib/index.d.ts",
-  "author": "shnyder.com",
+  "author": "@carloscasalar",
   "license": "MIT",
   "scripts": {
     "story": "start-storybook",
