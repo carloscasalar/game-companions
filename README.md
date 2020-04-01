@@ -1,2 +1,2 @@
-# lerna-typescript-cra-uilib-starter
-Starter for Monorepos: Lerna, TypeScript, CRA and Storybook
+# Game companions
+Monorepo to develop game companion apps.
