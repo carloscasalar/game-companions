@@ -1,10 +1,10 @@
 {
   "name": "lerna-typescript-cra-uilib-starter",
   "version": "1.0.0",
-  "description": "Starter for Monorepos: Lerna, TypeScript, CRA and Storybook",
+  "description": "A monorepo to create game companion apps and utilities",
   "main": "index.js",
-  "repository": "https://github.com/shnydercom/lerna-typescript-cra-uilib-starter.git",
-  "author": "shnyder.com",
+  "repository": "https://github.com/carloscasalar/game-companions.git",
+  "author": "@carloscasalar",
   "license": "MIT",
   "private": true,
   "workspaces": [
