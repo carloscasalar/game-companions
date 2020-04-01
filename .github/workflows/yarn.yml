@@ -8,7 +8,10 @@ jobs:
       - uses: actions/checkout@v1
       - uses: borales/actions-yarn@v2.0.0
         with:
-          cmd: install # will run `yarn install` command
+          cmd: install
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: lerna bootstrap
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: test-ci # will run `yarn test` command
