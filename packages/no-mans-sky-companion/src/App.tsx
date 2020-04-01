@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {MyNewComponent} from '@my-org/my-monorepo-ui-lib';
+import {MyNewComponent} from '@carloscasalar/react-ui-components';
 
 function App() {
   return (
