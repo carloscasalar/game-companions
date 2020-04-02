@@ -1,0 +1,20 @@
+name: CI
+on: [push]
+jobs:
+  build:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node ${{ matrix.node_version }}
+        uses: actions/setup-node@v1
+        with:
+          node_version: 12
+          registry-url: 'https://npm.pkg.github.com'
+      - name: Install
+        run: yarn install
+      - name: Lerna bootstrap
+        run: yarn lerna bootstrap
+      - name: Test
+        run: yarn test-ci
