@@ -1,5 +1,5 @@
 {
-  "name": "@carloscasalar/react-ui-components",
+  "name": "@carloscasalar/companion-ui",
   "version": "1.0.0",
   "description": "UI library for companion apps components",
   "main": "./lib/index.js",

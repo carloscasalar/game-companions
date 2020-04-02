@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {MyNewComponent} from '@carloscasalar/react-ui-components';
+import {MyNewComponent} from '@carloscasalar/companion-ui';
 
 function App() {
   return (
