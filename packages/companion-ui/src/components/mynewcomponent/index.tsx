@@ -5,7 +5,7 @@ export interface MyNewComponentProps {
 }
 
 export const MyNewComponent = (props: MyNewComponentProps) => {
-	return (<span>{props.text}</span>)
-}
+    return (<span>{props.text}</span>);
+};
 
 export default MyNewComponent;
