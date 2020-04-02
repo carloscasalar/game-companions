@@ -61,6 +61,7 @@ typings/
 .next
 
 *.lock
+!yarn.lock
 
 lib
 
