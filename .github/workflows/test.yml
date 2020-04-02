@@ -16,5 +16,7 @@ jobs:
         run: yarn install
       - name: Lerna bootstrap
         run: yarn lerna bootstrap
+      - name: Lib build
+        run: yarn prestart
       - name: Test
         run: yarn test-ci
