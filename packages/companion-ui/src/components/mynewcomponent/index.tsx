@@ -1,11 +1,11 @@
 import React from 'react';
 
 export interface MyNewComponentProps {
-	text: string;
+    text: string;
 }
 
 export const MyNewComponent = (props: MyNewComponentProps) => {
-    return (<span>{props.text}</span>);
+    return <span>{props.text}</span>;
 };
 
 export default MyNewComponent;
