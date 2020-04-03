@@ -14,12 +14,32 @@ module.exports = {
         }
     },
     rules: {
-        // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
-        // e.g. "@typescript-eslint/explicit-function-return-type": "off",
+       'import/no-extraneous-dependencies': [
+         'error',
+           {
+               devDependencies: [
+                 'src/**/*.spec.*',
+               ],
+           },
+       ],
+       'import/extensions': [
+         'error',
+         'ignorePackages',
+           {
+               'js': 'never',
+               'jsx': 'never',
+               'ts': 'never',
+               'tsx': 'never',
+           }
+       ],
+       'react/jsx-fragments': ['error','syntax'],
     },
     settings: {
         react: {
             version: "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
+        },
+        'import/resolver': {
+            typescript:{},
         }
     }
 };
