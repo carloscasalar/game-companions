@@ -2,12 +2,7 @@
 
 ## Semantic commit messages
 I'm using [semantic commit messages](https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716).
-To enforce them you can add a git hook following [this guide](https://github.com/hazcod/semantic-commit-hook) 
-**TL;DR** *type the following curl command in the root project folder*: 
-```
-curl --fail -o .git/hooks/commit-msg https://raw.githubusercontent.com/hazcod/semantic-commit-hook/master/commit-msg \
-  && chmod 500 .git/hooks/commit-msg` .
-```
+To enforce them I use the [git-semantics](https://github.com/kewitz/git-semantics) repo script.
 
 ## Lerna monorepo [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 This is a [Lerna monorepo](https://github.com/lerna/lerna). I've followed this guide, which I've found so useful an clean: https://dev.to/shnydercom/monorepos-lerna-typescript-cra-and-storybook-combined-4hli
