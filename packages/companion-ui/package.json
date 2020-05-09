@@ -10,7 +10,8 @@
   "scripts": {
     "story": "start-storybook",
     "libbuild": "tsc && tsc --build tsconfig.esm.json",
-    "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "lint-fix": "tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
+    "lint": "tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}' --quiet",
     "test": "echo \"no tests yet\" ",
     "test-ci": "echo \"no tests yet\" "
   },
