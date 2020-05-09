@@ -20,3 +20,5 @@ jobs:
         run: yarn prestart
       - name: Test
         run: yarn test-ci
+      - name: Lint
+        run: yarn lint
