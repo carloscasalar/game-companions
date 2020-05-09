@@ -34,6 +34,7 @@ export function register(config) {
 
             if (isLocalhost) {
                 // This is running on localhost. Let's check if a service worker still exists or not.
+                // eslint-disable-next-line @typescript-eslint/no-use-before-define
                 checkValidServiceWorker(swUrl, config);
 
                 // Add some additional logging to localhost, pointing developers to the
@@ -46,6 +47,7 @@ export function register(config) {
                 });
             } else {
                 // Is not localhost. Just register service worker
+                // eslint-disable-next-line @typescript-eslint/no-use-before-define
                 registerValidSW(swUrl, config);
             }
         });
