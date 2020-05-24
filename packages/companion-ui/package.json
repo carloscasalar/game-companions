@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.9.6",
-    "@storybook/react": "5.3.18",
+    "@storybook/react": "5.3.19",
     "@types/enzyme-adapter-react-16": "1.0.6",
     "@types/storybook__react": "5.2.1",
     "@typescript-eslint/eslint-plugin": "2.34.0",
