@@ -20,7 +20,7 @@
     "react-dom": "16.13.1"
   },
   "devDependencies": {
-    "@babel/core": "7.10.1",
+    "@babel/core": "7.10.2",
     "@storybook/react": "5.3.19",
     "@types/enzyme-adapter-react-16": "1.0.6",
     "@types/storybook__react": "5.2.1",
