@@ -5,18 +5,18 @@ import { Header } from './Header';
 import { Menu } from '../../menu/Menu';
 
 jest.mock('../../menu/Menu', () => ({
-    Menu() {
-        return <div>the menu</div>;
-    },
+  Menu() {
+    return <div>the menu</div>;
+  },
 }));
 
 describe('<Header />', () => {
-    let component: ShallowWrapper;
-    beforeEach(() => {
-        component = shallow(<Header />);
-    });
+  let component: ShallowWrapper;
+  beforeEach(() => {
+    component = shallow(<Header />);
+  });
 
-    it('should show the menu', () => {
-        expect(component.find(Menu).exists()).toBe(true);
-    });
+  it('should show the menu', () => {
+    expect(component.find(Menu).exists()).toBe(true);
+  });
 });

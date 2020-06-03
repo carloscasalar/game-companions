@@ -1,9 +1,9 @@
 import { createReducer } from 'typesafe-actions';
 
 export interface AuthSate {
-    isLoggedIn: boolean;
+  isLoggedIn: boolean;
 }
 
 export const auth = createReducer<AuthSate>({
-    isLoggedIn: false,
+  isLoggedIn: false,
 });

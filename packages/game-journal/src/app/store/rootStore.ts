@@ -3,7 +3,7 @@ import { combineReducers, createStore } from 'redux';
 import { auth } from '../../features/auth/reducer';
 
 const rootReducer = combineReducers({
-    auth,
+  auth,
 });
 export type RootState = StateType<typeof rootReducer>;
 
