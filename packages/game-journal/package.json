@@ -1,12 +1,22 @@
 {
-  "name": "no-mans-sky-companion",
+  "name": "game-journal",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@carloscasalar/companion-ui": "*",
+    "@chakra-ui/core": "0.8.0",
+    "@emotion/core": "10.0.28",
+    "@emotion/styled": "10.0.27",
+    "add": "2.0.6",
+    "emotion-theming": "10.0.27",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-scripts": "3.4.1"
+    "react-redux": "7.2.0",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "3.4.1",
+    "redux": "4.0.5",
+    "typesafe-actions": "5.1.0",
+    "yarn": "1.22.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,15 +49,22 @@
     "@types/node": "12.12.42",
     "@types/react": "16.9.35",
     "@types/react-dom": "16.9.8",
+    "@types/react-redux": "7.1.9",
+    "@types/react-router-dom": "5.1.5",
     "@typescript-eslint/eslint-plugin": "3.0.2",
     "@typescript-eslint/parser": "3.0.2",
+    "add": "2.0.6",
     "babel-loader": "8.1.0",
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.2",
     "eslint": "7.1.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-prettier": "3.1.3",
+    "jest": "24.9.0",
     "prettier": "2.0.5",
-    "typescript": "3.9.3"
+    "redux-devtools": "3.5.0",
+    "redux-devtools-extension": "2.13.8",
+    "typescript": "3.9.3",
+    "yarn": "1.22.4"
   }
 }

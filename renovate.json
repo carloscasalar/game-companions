@@ -13,6 +13,10 @@
         "digest"
       ],
       "automerge": true
+    },
+    {
+      "packagePatterns": ["^jest"],
+      "excludePackageNames": ["jest"]
     }
   ]
 }
