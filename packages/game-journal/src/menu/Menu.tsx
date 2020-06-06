@@ -1,7 +1,10 @@
-import React from 'react';
-import { Icon, Link, Stack } from '@chakra-ui/core';
+import React, { useContext } from 'react';
+import { Icon, Stack, Button } from '@chakra-ui/core';
+import { AuthContext } from '../features/auth/authContext';
 
 export const Menu = () => {
+  const auth = useContext(AuthContext);
+  console.log(auth.user);
   return (
     <Stack
       justifyContent="flex-end"
@@ -11,9 +14,16 @@ export const Menu = () => {
       fontSize="md"
       fontFamily="body"
     >
-      <Link data-qa="login-link">
-        Login <Icon name="external-link" mx="2" />
-      </Link>
+      {!auth.isAuthenticated && (
+        <Button data-qa="login-link" onClick={auth.login}>
+          Login <Icon name="external-link" mx="2" />
+        </Button>
+      )}
+      {auth.isAuthenticated && (
+        <Button data-qa="login-link" onClick={auth.logout}>
+          Logout <Icon name="external-link" mx="2" />
+        </Button>
+      )}
     </Stack>
   );
 };
