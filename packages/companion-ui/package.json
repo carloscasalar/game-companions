@@ -24,11 +24,11 @@
     "@storybook/react": "5.3.19",
     "@types/enzyme-adapter-react-16": "1.0.6",
     "@types/storybook__react": "5.2.1",
-    "@typescript-eslint/eslint-plugin": "3.0.2",
-    "@typescript-eslint/parser": "3.0.2",
+    "@typescript-eslint/eslint-plugin": "3.1.0",
+    "@typescript-eslint/parser": "3.1.0",
     "awesome-typescript-loader": "5.2.1",
     "babel-loader": "8.1.0",
-    "eslint": "7.1.0",
+    "eslint": "7.2.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-prettier": "3.1.3",
     "node-sass": "4.14.1",
@@ -36,6 +36,6 @@
     "sass-loader": "8.0.2",
     "source-map-loader": "1.0.0",
     "style-loader": "1.2.1",
-    "typescript": "3.9.3"
+    "typescript": "3.9.5"
   }
 }
