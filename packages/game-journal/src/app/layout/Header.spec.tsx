@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 
 import { Header } from './Header';
-import { Menu } from '../../menu/Menu';
+import { Menu } from '../../features/menu/Menu';
 
 jest.mock('../../menu/Menu', () => ({
   Menu() {

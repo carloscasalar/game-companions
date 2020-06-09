@@ -1,6 +1,6 @@
 import React from 'react';
 import { Icon, Stack, Button, Divider } from '@chakra-ui/core';
-import { useAuth } from '../features/auth/useAuth';
+import { useAuth } from '../auth/useAuth';
 import { Link as ReactRouterLink } from 'react-router-dom';
 
 export const Menu = () => {
