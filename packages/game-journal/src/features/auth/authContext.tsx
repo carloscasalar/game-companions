@@ -11,18 +11,24 @@ export type User = {
   isVerified: boolean;
 };
 
+type GetToken = () => Promise<string>;
+
 interface AuthContextModel {
   isAuthenticated: boolean;
   isLoading: boolean;
   user?: User;
   login: () => void;
   logout: () => void;
+  getToken: GetToken;
 }
 
 const toUser = ({ sub, email_verified }: Auth0User): User => ({
   id: sub,
   isVerified: email_verified,
 });
+
+const getTokenDefault: GetToken = () =>
+  Promise.reject(new Error('auth context not yet loaded'));
 
 export const AuthContext = createContext<AuthContextModel>({
   isAuthenticated: false,
@@ -31,6 +37,7 @@ export const AuthContext = createContext<AuthContextModel>({
   login: () => {},
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   logout: () => {},
+  getToken: getTokenDefault,
 });
 
 export interface AuthProviderProps {
@@ -96,6 +103,13 @@ export const AuthProvider: FC = ({ children }: AuthProviderProps) => {
         },
         logout: () => {
           authClient?.logout();
+        },
+        getToken: async () => {
+          if (!authClient) {
+            return getTokenDefault();
+          }
+
+          return authClient.getTokenSilently();
         },
       }}
     >
