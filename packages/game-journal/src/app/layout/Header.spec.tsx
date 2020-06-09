@@ -4,7 +4,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import { Header } from './Header';
 import { Menu } from '../../features/menu/Menu';
 
-jest.mock('../../menu/Menu', () => ({
+jest.mock('../../features/menu/Menu', () => ({
   Menu() {
     return <div>the menu</div>;
   },
