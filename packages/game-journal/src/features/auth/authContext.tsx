@@ -1,9 +1,14 @@
 import React, { createContext, FC, useEffect, useState } from 'react';
 import createAuth0Client, { Auth0Client } from '@auth0/auth0-spa-js';
 
+type Auth0User = {
+  sub: string;
+  email_verified: boolean;
+};
+
 export type User = {
   id: string;
-  name: string;
+  isVerified: boolean;
 };
 
 interface AuthContextModel {
@@ -13,6 +18,11 @@ interface AuthContextModel {
   login: () => void;
   logout: () => void;
 }
+
+const toUser = ({ sub, email_verified }: Auth0User): User => ({
+  id: sub,
+  isVerified: email_verified,
+});
 
 export const AuthContext = createContext<AuthContextModel>({
   isAuthenticated: false,
@@ -56,23 +66,24 @@ export const AuthProvider: FC = ({ children }: AuthProviderProps) => {
         window.location.search.includes('state=')
       ) {
         await client.handleRedirectCallback();
-        // window.location.replace(window.location.pathname);
+        window.location.replace(window.location.pathname);
       }
 
       const authenticated = await client.isAuthenticated();
       setIsAuthenticated(authenticated);
 
       if (authenticated) {
-        const authUser = await client.getUser();
-        setUser(authUser);
-        console.log('the user', authUser);
-      } else {
-        console.log('not authenticated :(');
+        const authUser = (await client.getUser()) as Auth0User;
+        setUser(toUser(authUser));
       }
 
       setLoading(false);
     }
   }, []);
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <AuthContext.Provider
