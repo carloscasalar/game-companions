@@ -1,0 +1,8 @@
+[build]
+  command = "yarn build"
+  publish = "packages/game-journal/build"
+  functions = "packages/game-journal-services/build"
+
+[[redirects]]
+  from = "/games"
+  to = "/.netlify/functions/games"
