@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
-    "build": "tsc:build"
+    "build": "tsc --noEmit false"
   },
   "author": "@carloscasalar",
   "license": "MIT",
