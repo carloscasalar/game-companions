@@ -4,5 +4,6 @@
   functions = "packages/game-journal-services/build"
 
 [[redirects]]
-  from = "/games"
+  from = "/api/games"
   to = "/.netlify/functions/games"
+  status = 200
