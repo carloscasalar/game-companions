@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
-    "build": "tsc --noEmit false"
+    "build": "tsc && tsc --build tsconfig.esm.json"
   },
   "author": "@carloscasalar",
   "license": "MIT",

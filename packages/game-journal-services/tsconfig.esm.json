@@ -1,0 +1,12 @@
+{
+  "include": [
+    "src"
+  ],
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./build",
+    "lib": ["es2018"],
+    "declaration": false,
+    "noEmit": false
+  }
+}
