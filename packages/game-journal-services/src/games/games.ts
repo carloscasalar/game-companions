@@ -1,43 +1,35 @@
 import {
   LambdaController,
-  LambdaEvent,
   LambdaHandler,
-  LambdaResponse,
+  WithHttpMethodHandler,
 } from '../netlify/types';
+import { controller } from '../netlify/controller';
 
 export type Game = {
   id: string;
   name: string;
 };
 
-class GameController implements LambdaController {
-  async handler(event: LambdaEvent): Promise<LambdaResponse> {
-    if (event.httpMethod !== 'GET') {
-      return {
-        isBase64Encoded: false,
-        statusCode: 405,
-        body: JSON.stringify({
-          error: 'Method Not Allowed',
-        }),
-        headers: { 'Content-Type': 'application/json' },
-      };
-    }
+export type GameResponse = {
+  games: Game[];
+};
+
+const getGames: WithHttpMethodHandler<'GET', GameResponse> = {
+  async get() {
     return {
-      isBase64Encoded: false,
-      statusCode: 200,
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        games: [
-          {
-            id: 'nms',
-            name: "No Man's Sky",
-          },
-        ],
-      }),
+      games: [
+        {
+          id: 'nms',
+          name: "No Man's Sky",
+        },
+      ],
     };
-  }
-}
+  },
+};
 
-const controller = new GameController();
+const gameController: LambdaController = {
+  ...getGames,
+  ...controller,
+};
 
-export const handler: LambdaHandler = controller.handler;
+export const handler: LambdaHandler = gameController.handler;
