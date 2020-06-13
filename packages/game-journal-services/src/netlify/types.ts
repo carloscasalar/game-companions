@@ -32,13 +32,13 @@ export interface Event {
   isBase64Encoded: boolean;
 }
 
-export type HandlerWithCallback<TBody> = (
+export type LambdaHandlerWithCallback<TBody> = (
   event: Event,
   context: Context,
   callback: Callback<TBody>
 ) => void;
 
-export type Handler<TBody> = (
+export type LambdaHandler<TBody> = (
   event: Event,
   context: Context
 ) => Promise<Response<TBody>>;
