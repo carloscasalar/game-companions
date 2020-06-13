@@ -5,14 +5,14 @@ export type Game = {
   name: string;
 };
 
-export const handler: LambdaHandler<{ games: Game[] }> = async () => ({
+export const handler: LambdaHandler<string> = async () => ({
   statusCode: 200,
-  body: {
+  body: JSON.stringify({
     games: [
       {
         id: 'nms',
         name: "No Man's Sky",
       },
     ],
-  },
+  }),
 });
