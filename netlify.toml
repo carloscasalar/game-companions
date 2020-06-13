@@ -1,5 +1,5 @@
 [build]
-  command = "yarn build"
+  command = "yarn prestart && yarn build"
   publish = "packages/game-journal/build"
   functions = "packages/game-journal-services/build"
 
