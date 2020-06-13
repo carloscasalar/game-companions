@@ -1,20 +1,19 @@
-export interface Response<TBody> {
+export interface LambdaResponse {
   statusCode: number;
-  body: TBody;
+  isBase64Encoded: boolean;
+  headers?: Record<string, string>;
+  body: string;
 }
-export type Callback<TBody> = (
-  error: Error | null,
-  response: Response<TBody>
-) => void;
+export type Callback = (error: Error | null, response: LambdaResponse) => void;
 
-export interface Context {
+export interface LambdaContext {
   isBase64Encoded: boolean;
   statusCode: number;
-  headers: { [header: string]: string };
+  headers: Record<string, string>;
   body: string;
 }
 
-export interface Event {
+export interface LambdaEvent {
   path: string;
   httpMethod:
     | 'get'
@@ -26,19 +25,23 @@ export interface Event {
     | 'options'
     | 'trace'
     | 'patch';
-  headers: { [header: string]: string };
-  queryStringParameters: { [parameter: string]: string };
+  headers: Record<string, string>;
+  queryStringParameters: Record<string, string>;
   body: string;
   isBase64Encoded: boolean;
 }
 
-export type LambdaHandlerWithCallback<TBody> = (
-  event: Event,
-  context: Context,
-  callback: Callback<TBody>
+export type LambdaHandlerWithCallback = (
+  event: LambdaEvent,
+  context: LambdaContext,
+  callback: Callback
 ) => void;
 
-export type LambdaHandler<TBody> = (
-  event: Event,
-  context: Context
-) => Promise<Response<TBody>>;
+export type LambdaHandler = (
+  event: LambdaEvent,
+  context: LambdaContext
+) => Promise<LambdaResponse>;
+
+export interface LambdaController {
+  handler: LambdaHandler;
+}
