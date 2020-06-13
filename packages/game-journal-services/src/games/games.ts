@@ -12,12 +12,12 @@ export type Game = {
 
 class GameController implements LambdaController {
   async handler(event: LambdaEvent): Promise<LambdaResponse> {
-    if (event.httpMethod !== 'get') {
+    if (event.httpMethod !== 'GET') {
       return {
         isBase64Encoded: false,
-        statusCode: 404,
+        statusCode: 405,
         body: JSON.stringify({
-          error: 'not found',
+          error: 'Method Not Allowed',
         }),
         headers: { 'Content-Type': 'application/json' },
       };
