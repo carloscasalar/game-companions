@@ -4,7 +4,7 @@
   "description": "Lambda functions for game journal",
   "main": "functions/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "tsc": "tsc",
     "build": "tsc && tsc --build tsconfig.esm.json"
   },
