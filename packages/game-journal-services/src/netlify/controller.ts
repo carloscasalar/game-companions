@@ -26,7 +26,7 @@ export const controller: LambdaController = {
         isBase64Encoded: false,
         statusCode: 405,
         body: JSON.stringify({
-          error: 'Method Not Allowed',
+          error: `Method Not Allowed: ${httpMethod}`,
         }),
         headers: { 'Content-Type': 'application/json' },
       };
