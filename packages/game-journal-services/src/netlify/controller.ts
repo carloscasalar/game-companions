@@ -6,7 +6,7 @@ import {
 } from './types';
 
 const getMethodHandlerName = (httpMethod: LambdaEvent['httpMethod']) =>
-  `${httpMethod}`.toLowerCase();
+  httpMethod === 'DELETE' ? 'destroy' : `${httpMethod}`.toLowerCase();
 
 export const controller: LambdaController = {
   async handler({
