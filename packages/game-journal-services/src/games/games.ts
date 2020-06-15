@@ -25,4 +25,5 @@ const getGames: WithHttpMethodHandler<'GET', GameResponse> = {
 
 const gameController = getController(getGames);
 
-export const handler: LambdaHandler = gameController.handler;
+export const handler: LambdaHandler = (...args) =>
+  gameController.handler(...args);
