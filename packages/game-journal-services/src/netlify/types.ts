@@ -79,13 +79,23 @@ export type MethodHandlerParams<
   body?: TResponseBody;
 };
 
+export type MethodHandler<
+  TResponseBody,
+  TQuery = Record<string, string>,
+  THeaders = Record<string, string>
+> = (
+  params: MethodHandlerParams<TResponseBody, TQuery, THeaders>
+) => Promise<TResponseBody> | never;
+
 export type WithHttpMethodHandler<
   THttpMethod extends HttpMethod,
   TResponseBody,
   TQuery = Record<string, string>,
   THeaders = Record<string, string>
 > = {
-  [key in HttpMethodHandlerName<THttpMethod>]: (
-    params: MethodHandlerParams<TResponseBody, TQuery, THeaders>
-  ) => Promise<TResponseBody>;
+  [key in HttpMethodHandlerName<THttpMethod>]: MethodHandler<
+    TResponseBody,
+    TQuery,
+    THeaders
+  >;
 };

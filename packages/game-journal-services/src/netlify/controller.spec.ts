@@ -5,22 +5,7 @@ import {
   LambdaResponse,
   WithHttpMethodHandler,
 } from './types';
-import { controller } from './controller';
-//
-// const allMethods: HttpMethod[] = [
-//   'GET',
-//   'HEAD',
-//   'POST',
-//   'PUT',
-//   'DELETE',
-//   'CONNECT',
-//   'OPTIONS',
-//   'TRACE',
-//   'PATCH',
-// ];
-//
-// const allMethodsBut = (exceptMethod: HttpMethod): HttpMethod[] =>
-//   allMethods.filter((m) => m !== exceptMethod);
+import { controller, getController } from './controller';
 
 describe('netlify/controller', () => {
   describe('a controller with only GET handler', () => {
@@ -32,10 +17,7 @@ describe('netlify/controller', () => {
         },
       };
 
-      controllerWithGet = {
-        ...controller,
-        ...getHandler,
-      };
+      controllerWithGet = getController(getHandler);
     });
 
     describe('when handle a GET request', () => {

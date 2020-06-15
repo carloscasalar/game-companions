@@ -1,9 +1,5 @@
-import {
-  LambdaController,
-  LambdaHandler,
-  WithHttpMethodHandler,
-} from '../netlify/types';
-import { controller } from '../netlify/controller';
+import { LambdaHandler, WithHttpMethodHandler } from '../netlify/types';
+import { getController } from '../netlify/controller';
 
 export type Game = {
   id: string;
@@ -27,9 +23,6 @@ const getGames: WithHttpMethodHandler<'GET', GameResponse> = {
   },
 };
 
-const gameController: LambdaController = {
-  ...getGames,
-  ...controller,
-};
+const gameController = getController(getGames);
 
 export const handler: LambdaHandler = gameController.handler;
