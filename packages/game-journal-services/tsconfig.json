@@ -2,7 +2,7 @@
   "exclude": [
     "node_modules",
     "build",
-    "**/*.spec"
+    "**/*.spec*"
   ],
   "include": [
     "src"
