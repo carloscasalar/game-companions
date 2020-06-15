@@ -5,6 +5,7 @@
   "main": "functions/index.js",
   "scripts": {
     "test": "jest",
+    "test-ci": "jest",
     "tsc": "tsc",
     "build": "tsc && tsc --build tsconfig.esm.json"
   },
