@@ -5,7 +5,7 @@ import {
   LambdaResponse,
   WithHttpMethodHandler,
 } from './types';
-import { controller, getController } from './controller';
+import { getController } from './controller';
 
 describe('netlify/controller', () => {
   describe('a controller with only GET handler', () => {
