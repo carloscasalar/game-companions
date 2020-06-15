@@ -56,7 +56,6 @@ const controller: LambdaController & WithIsNotAllowed = {
         error: 'Method Not Allowed',
         detail: {
           method: httpMethod,
-          keys: Object.keys(this),
         },
       });
     }
