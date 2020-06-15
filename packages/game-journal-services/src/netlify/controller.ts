@@ -1,9 +1,28 @@
 import {
+  HttpMethod,
+  HttpMethodHandlerName,
   LambdaController,
   LambdaEvent,
   LambdaResponse,
   MethodHandlerParams,
 } from './types';
+
+const httpMethodsAndHandlerNames: {
+  method: HttpMethod;
+  handlerName: HttpMethodHandlerName<HttpMethod>;
+}[] = [
+  { method: 'GET', handlerName: 'get' },
+  { method: 'HEAD', handlerName: 'head' },
+  { method: 'POST', handlerName: 'post' },
+  { method: 'PUT', handlerName: 'put' },
+  { method: 'DELETE', handlerName: 'destroy' },
+  { method: 'CONNECT', handlerName: 'connect' },
+  { method: 'OPTIONS', handlerName: 'options' },
+  { method: 'TRACE', handlerName: 'trace' },
+  { method: 'PATCH', handlerName: 'patch' },
+];
+
+const defaultHandlers =
 
 const getMethodHandlerName = (httpMethod: LambdaEvent['httpMethod']) =>
   httpMethod === 'DELETE' ? 'destroy' : `${httpMethod}`.toLowerCase();
