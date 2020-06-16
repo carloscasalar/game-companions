@@ -7,8 +7,10 @@ This package contains the backend services as lambda functions.
 This is the data schema.
 
 ```mermaid
+
 erDiagram
-        FEATURE ||--o{ GAME : "enabled features"
+
+    FEATURE ||--o{ GAME : enabled
 ```
 
 ### Feature
