@@ -2,7 +2,7 @@
   "name": "game-journal-services",
   "version": "1.0.0",
   "description": "Lambda functions for game journal",
-  "main": "functions/index.js",
+  "private": true,
   "scripts": {
     "test": "jest",
     "test-ci": "jest",

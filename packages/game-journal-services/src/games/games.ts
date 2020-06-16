@@ -4,6 +4,7 @@ import { getController } from '../netlify/controller';
 export type Game = {
   id: string;
   name: string;
+  features: string[];
 };
 
 export type GameResponse = {
@@ -17,6 +18,7 @@ const getGames: WithHttpMethodHandler<'GET', GameResponse> = {
         {
           id: 'nms',
           name: "No Man's Sky",
+          features: ['places'],
         },
       ],
     };

@@ -23,7 +23,8 @@ describe('/src/games/games', () => {
 
   it('should return the games list', () => {
     expect(response).toEqual({
-      body: '{"games":[{"id":"nms","name":"No Man\'s Sky"}]}',
+      body:
+        '{"games":[{"id":"nms","name":"No Man\'s Sky","features":["places"]}]}',
       headers: {
         'Content-Type': 'application/json',
       },
