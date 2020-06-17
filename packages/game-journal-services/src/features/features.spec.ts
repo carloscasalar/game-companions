@@ -1,7 +1,7 @@
 import { LambdaContext, LambdaEvent, LambdaResponse } from '../netlify/types';
-import { handler } from './games';
+import { handler } from './features';
 
-describe('/src/games/games', () => {
+describe('/src/features/features', () => {
   let response: LambdaResponse;
   beforeEach(async () => {
     const event: LambdaEvent = {
@@ -9,22 +9,22 @@ describe('/src/games/games', () => {
       queryStringParameters: {},
       isBase64Encoded: false,
       headers: {},
-      path: 'a/path',
+      path: 'api/features',
       body: '',
     };
     const context: LambdaContext = {
       headers: {},
-      isBase64Encoded: true,
-      statusCode: 200,
-      body: '',
+      isBase64Encoded: false,
+      statusCode: undefined,
+      body: undefined,
     };
     response = await handler(event, context);
   });
 
-  it('should return the game list', () => {
+  it('should return the feature list', () => {
     expect(response).toEqual({
       body:
-        '{"games":[{"id":"nms","name":"No Man\'s Sky","features":["places"]}]}',
+        '{"features":[{"id":"places","name":"places","description":"It allows to maintain a list of places and locations in the game"}]}',
       headers: {
         'Content-Type': 'application/json',
       },
