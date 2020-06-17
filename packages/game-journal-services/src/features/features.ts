@@ -1,5 +1,5 @@
 import { LambdaHandler, WithHttpMethodHandler } from '../netlify/types';
-import { getController } from '../netlify/controller';
+import { getController } from '../netlify/getController';
 
 export type Feature = {
   id: string;
