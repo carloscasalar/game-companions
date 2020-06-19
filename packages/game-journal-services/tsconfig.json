@@ -1,0 +1,19 @@
+{
+  "exclude": [
+    "node_modules",
+    "build",
+    "**/*.spec*"
+  ],
+  "include": [
+    "src"
+  ],
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "target": "es2018",
+    "module": "commonjs",
+    "outDir": "./build",
+    "removeComments": true,
+    "noEmit": true
+  }
+}

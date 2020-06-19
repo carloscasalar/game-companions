@@ -1,0 +1,9 @@
+[build]
+  command = "yarn prestart && yarn build"
+  publish = "packages/game-journal/build"
+  functions = "packages/game-journal-services/build"
+
+[[redirects]]
+  from = "/api/games"
+  to = "/.netlify/functions/games"
+  status = 200
