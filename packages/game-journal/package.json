@@ -29,7 +29,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "@types/enzyme": "3.10.6",
+    "@types/enzyme": "3.10.7",
     "@types/enzyme-adapter-react-16": "1.0.6",
     "@types/jest": "25.2.3",
     "@types/node": "12.12.62",
@@ -42,9 +42,9 @@
     "add": "2.0.6",
     "babel-loader": "8.1.0",
     "enzyme": "3.11.0",
-    "enzyme-adapter-react-16": "1.15.4",
+    "enzyme-adapter-react-16": "1.15.5",
     "eslint": "7.9.0",
-    "eslint-config-prettier": "6.11.0",
+    "eslint-config-prettier": "6.12.0",
     "eslint-plugin-prettier": "3.1.4",
     "jest": "24.9.0",
     "prettier": "2.1.2",
