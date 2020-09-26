@@ -3812,10 +3812,10 @@
     "@types/cheerio" "*"
     "@types/react" "*"
 
-"@types/enzyme@3.10.6":
-  version "3.10.6"
-  resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-3.10.6.tgz#a34a6b09ff732be29c194dc8d786555f4717fd85"
-  integrity sha512-Jxyn2U+UfhmrE7EaeZYfV1sPA5OEDuZmg9Lxj8TxOnfCn71flf0Cn1136LWdCVYj7yapLFmUWqKCcgplWNZCJg==
+"@types/enzyme@3.10.7":
+  version "3.10.7"
+  resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-3.10.7.tgz#ebdf3b972d293095e09af479e36c772025285e3a"
+  integrity sha512-J+0wduPGAkzOvW7sr6hshGv1gBI3WXLRTczkRKzVPxLP3xAkYxZmvvagSBPw8Z452fZ8TGUxCmAXcb44yLQksw==
   dependencies:
     "@types/cheerio" "*"
     "@types/react" "*"
@@ -7845,10 +7845,10 @@ envinfo@^7.3.1:
   resolved "https://registry.yarnpkg.com/envinfo/-/envinfo-7.5.1.tgz#93c26897225a00457c75e734d354ea9106a72236"
   integrity sha512-hQBkDf2iO4Nv0CNHpCuSBeaSrveU6nThVxFGTrq/eDlV716UQk09zChaJae4mZRsos1x4YLY2TaH3LHUae3ZmQ==
 
-enzyme-adapter-react-16@1.15.4:
-  version "1.15.4"
-  resolved "https://registry.yarnpkg.com/enzyme-adapter-react-16/-/enzyme-adapter-react-16-1.15.4.tgz#328a782365a363ecb424f99283c4833dd92c0f21"
-  integrity sha512-wPzxs+JaGDK2TPYzl5a9YWGce6i2SQ3Cg51ScLeyj2WotUZ8Obcq1ke/U1Y2VGpYlb9rrX2yCjzSMgtKCeAt5w==
+enzyme-adapter-react-16@1.15.5:
+  version "1.15.5"
+  resolved "https://registry.yarnpkg.com/enzyme-adapter-react-16/-/enzyme-adapter-react-16-1.15.5.tgz#7a6f0093d3edd2f7025b36e7fbf290695473ee04"
+  integrity sha512-33yUJGT1nHFQlbVI5qdo5Pfqvu/h4qPwi1o0a6ZZsjpiqq92a3HjynDhwd1IeED+Su60HDWV8mxJqkTnLYdGkw==
   dependencies:
     enzyme-adapter-utils "^1.13.1"
     enzyme-shallow-equal "^1.0.4"
@@ -8071,10 +8071,10 @@ escodegen@^1.14.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-prettier@6.11.0:
-  version "6.11.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.11.0.tgz#f6d2238c1290d01c859a8b5c1f7d352a0b0da8b1"
-  integrity sha512-oB8cpLWSAjOVFEJhhyMZh6NOEOtBVziaqdDQ86+qhDHFbZXoRTM7pNSvFRfW/W/L/LrQ38C99J5CGuRBBzBsdA==
+eslint-config-prettier@6.12.0:
+  version "6.12.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-6.12.0.tgz#9eb2bccff727db1c52104f0b49e87ea46605a0d2"
+  integrity sha512-9jWPlFlgNwRUYVoujvWTQ1aMO8o6648r+K7qU7K5Jmkbyqav1fuEZC0COYpGBxyiAJb65Ra9hrmFx19xRGwXWw==
   dependencies:
     get-stdin "^6.0.0"
 
