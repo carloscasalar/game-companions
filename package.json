@@ -11,7 +11,7 @@
     "packages/*"
   ],
   "devDependencies": {
-    "lerna": "3.22.1"
+    "lerna": "6.6.1"
   },
   "scripts": {
     "story": "lerna run story --stream",
