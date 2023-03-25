@@ -56,7 +56,7 @@
     "extends": "react-app"
   },
   "resolutions": {
-    "babel-loader": "8.1.0"
+    "babel-loader": "9.1.2"
   },
   "browserslist": {
     "production": [
